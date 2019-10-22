@@ -1,0 +1,47 @@
+* {
+	margin: auto;
+	padding: 0;
+}
+body {
+	overflow-x: hidden;
+	background: #00B4DB;
+	background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);
+	background: linear-gradient(to right, #0083B0, #00B4DB);
+}
+.developer {
+	padding: 10px;
+    border-radius: 25px;
+    width: 200px;
+	height: auto;
+	background-color: lavender;
+}
+.mainCard{
+	height: auto;
+}
+#location {
+	font-size: 12px;
+}
+i {
+	cursor: pointer;
+}
+i:hover{
+	opacity: .7;
+}
+.emailButton {
+	color: white;
+	padding: 10px;
+    border-radius: 25px;
+    width: 200px;
+	height: auto;
+	background-color: #2d89ef;
+}
+button:hover{
+	opacity: .7;;
+}
+
+.hamburger {
+	width: 25px;
+	height: 3px;
+	background-color: black;
+	margin: 6px 0;
+  }
