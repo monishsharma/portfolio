@@ -1,107 +1,192 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="https://kit.fontawesome.com/9720f054c5.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="https://kit.fontawesome.com/9720f054c5.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </head>
+<style>
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(140px, 200px));
+    overflow: hidden;
+    padding: 0px;
+    margin: 20px 0px 0px;
+    list-style: none;
+  }
+  .list-container{
+    position: relative;
+    margin-bottom: 10px !important;
+    padding-left: 20px;
+    margin: 0;
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+    font-size: 13px;
+    color: rgb(136, 146, 176);
+  }
 
+  .list-container::before{
+    content: "▹";
+    position: absolute;
+    left: 0px;
+    color: #00B4DB;
+    font-size: 24px;
+    line-height: 18px;
+  }
+  .btn {
+  box-sizing: border-box;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  border: 2px solid #00B4DB;
+  border-radius: 0.6em;
+  color: #00B4DB;
+  cursor: pointer;
+  display: -webkit-box;
+  display: flex;
+  align-self: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  margin: 20px;
+  padding: 1.2em 2.8em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+ a{
+  list-style: none;
+  text-decoration: none;
+}
+</style>
 <body>
-    <div class="md-modal md-effect-12">
-        <div class="md-content">
-                <p style="cursor: pointer; font-size: 25px;" class="md-close float-right mb-5">&times;</p>
+  <div class="md-modal md-effect-12">
+    <div class="md-content">
+      <p style="cursor: pointer; font-size: 25px;" class="md-close float-right mb-5">&times;</p>
 
-                <section class="accordion">
-                        <section class="accordion-tabs">
-                          <button class="accordion-tab accordion-active" data-actab-group="0" data-actab-id="0"><span>About Me</span></button>
-                          <button class="accordion-tab" data-actab-group="0" data-actab-id="1">Experience</button>
-                          <button class="accordion-tab" data-actab-group="0" data-actab-id="2">Skills</button>
-                          <button class="accordion-tab" data-actab-group="0" data-actab-id="3">Projects</button>
-                          <button class="accordion-tab" data-actab-group="0" data-actab-id="4">Contact</button>
-                        </section>
-                        <section class="accordion-content">
-                          <article class="accordion-item accordion-active" data-actab-group="0" data-actab-id="0">
-                            <h4 class="accordion-item__label">About Me</h4>
-                            <div class="accordion-item__container">
-                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, deserunt minima? Ut facere minus, ipsa dolore animi quis alias eos, porro corporis quod esse quidem. Maxime a aperiam perspiciatis architecto?</p>
-                            </div>
-                          </article>
-                          <article class="accordion-item" data-actab-group="0" data-actab-id="1">
-                            <h4 class="accordion-item__label">Experience</h4>
-                            <div class="accordion-item__container">
-                            <!-- <p class="float-right"  style="font-size: 15px;"> - Faridabad,Harayana,India</p>                                -->
-                                
-                            <p ><b>Xamidea</b> - <span style="font-size: 15px;">Front End Developer</span> </p> 
-                            <p  style="font-size: 15px;">04/2019 - present </p>             
-                              <p>
-                                    I've been working on a live app <b>Xamidea</b> since my first day. It is an student learing app. 
-                                    I'm also working on another upcoming web applications <b>RaveScan</b>. It is an ERP system for the organisation.
-                              </p>
-                            </div>
-                          </article>
-                          <article class="accordion-item" data-actab-group="0" data-actab-id="2">
-                            <h4 class="accordion-item__label">Skills</h4>
-                            <div class="accordion-item__container">
-                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, deserunt minima? Ut facere minus, ipsa dolore animi quis alias eos, porro corporis quod esse quidem. Maxime a aperiam perspiciatis architecto?</p>
-                            </div>
-                          </article>
-                          <article class="accordion-item" data-actab-group="0" data-actab-id="3">
-                            <h4 class="accordion-item__label">Projects</h4>
-                            <div class="accordion-item__container">
-                              <p>psum dolor sit amet, consectetur adipisicing elit. Voluptates, deserunt minima? Ut facere minus, ipsa dolore</p>
-                            </div>
-                          </article>
-                          <article class="accordion-item" data-actab-group="0" data-actab-id="4">
-                            <h4 class="accordion-item__label">Contact</h4>
-                            <div class="accordion-item__container">
-                              <p>aborum similique facere quae. Quo cupiditate ad iste qui aliquam quibusdam quod, ut doloremque ipsa quas soluta, sapiente possimus, tempora rerum ab nesciunt vitae molestiae dolor earum illum repudiandae! Voluptas sed, soluta facere nisi perferendis cupiditate! Dicta et praesentium non ab, quod commodi, illo saepe accusantium tempora autem eos nemo. Animi, pariatur placeat laudantium dolorib!</p>
-                            </div>
-                          </article>
-                        </section>
-                      </section>
+      <section class="accordion">
+        <section class="accordion-tabs">
+          <button class="accordion-tab accordion-active" data-actab-group="0" data-actab-id="0"><span>About
+              Me</span></button>
+          <button class="accordion-tab" data-actab-group="0" data-actab-id="1">Experience</button>
+          <button class="accordion-tab" data-actab-group="0" data-actab-id="2">Skills</button>
+          <button class="accordion-tab" data-actab-group="0" data-actab-id="3">Projects</button>
+          <button class="accordion-tab" data-actab-group="0" data-actab-id="4">Contact</button>
+        </section>
+        <section class="accordion-content">
+          <article class="accordion-item accordion-active" data-actab-group="0" data-actab-id="0">
+            <h4 class="accordion-item__label">About Me</h4>
+            <div class="accordion-item__container">
+              <p>I'm a front end developer based in Delhi, INDIA specializing in building (and occasionally designing) exceptional web app with the modern front end libraries.</p>
             </div>
-        </div>
+          </article>
+          <article class="accordion-item" data-actab-group="0" data-actab-id="1">
+            <h4 class="accordion-item__label">Experience</h4>
+            <div class="accordion-item__container">
+              <!-- <p class="float-right"  style="font-size: 15px;"> - Faridabad,Harayana,India</p>                                -->
+
+              <p><b>Xamidea</b> - <span style="font-size: 15px;">Front End Developer</span> </p>
+              <p style="font-size: 15px;">04/2019 - present </p>
+              <p>
+                Write modern, readable, maintainable and moreover reusable code
+                Learnt create, read, update, delete operation.
+                Working with a variety of diffent programming languages, platform, framework such as React with Redux, Vue with Vuex, JavaScript
+                Communicate with multi-disciplinary teams of engineers, designers, producers on a daily basis
+              </p>
+            </div>
+          </article>
+          <article class="accordion-item" data-actab-group="0" data-actab-id="2">
+            <h4 class="accordion-item__label">Skills</h4>
+            <div class="accordion-item__container">
+             <ul class="grid-container">
+               <li class="list-container">Reactjs with redux</li>
+               <li class="list-container">Vuejs with vuex</li>
+               <li class="list-container">html & css</li>
+               <li class="list-container">JavaScript</li>
+             </ul>
+            </div>
+          </article>
+          <article class="accordion-item" data-actab-group="0" data-actab-id="3">
+            <h4 class="accordion-item__label">Projects</h4>
+            <div class="accordion-item__container">
+              <div class="accordion-item__container">
+                <p><butto class="btn">
+                  <a >
+                   View Projects
+                  </a>
+                </butto></p>
+              </div>
+            </div>
+          </article>
+          <article class="accordion-item" data-actab-group="0" data-actab-id="4">
+            <h4 class="accordion-item__label">Contact</h4>
+            <div class="accordion-item__container">
+              <p><butto class="btn">
+                <a href="mailto:sharma.monish17@gmail.com">
+                  Say Hello
+                </a>
+              </butto></p>
+            </div>
+          </article>
+        </section>
+      </section>
     </div>
+  </div>
+  </div>
 
-    <div class="md-overlay"></div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-5 mt-5">
-                <div class="card mainCard" style="width: 20rem; height: 35rem; border-radius: 3%;">
-                    <img class="card-img-top mt-4" style="width: 100px; height: auto;"
-                        src="http://www.hotavatars.com/wp-content/uploads/2019/01/I80W1Q0.png" alt="Card image cap">
-                    <div class="card-body">
-                        <h3 class="card-text">Monish Sharma</h3>
-                        <p class="card-text text-center developer mt-4">Front End Developer</p>
-                        <p class=" text-center mt-5">
-                            <i class="fab fa-facebook mr-2 fa-lg"></i>
-                            <i class="fab fa-instagram mr-2 fa-lg"></i>
-                            <i class="fab fa-github fa-lg"></i>
-                        </p>
-                        <div class="card " style="border: none;;">
-                            <div class="card-body">
-                                <p id="location">
-                                    <i class="far fa-calendar-check mr-2"></i>
-                                    December, 11 1997
-                                </p>
-                                <p id="location">
-                                    <i class="fas fa-location-arrow mr-2 x"></i>
-                                    Gwalior ,India
-                                </p>
-                            </div>
-                        </div>
-                        <button style="border: none; outline:none;"
-                            class="card-text md-trigger text-center emailButton  mt-4" data-modal="modal-12">About
-                            Me</button>
+  <div class="md-overlay"></div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-5 mt-5">
+        <div class="card mainCard" style="width: 20rem; height: 35rem; border-radius: 3%;">
+          <img class="card-img-top mt-4" style="width: 100px; height: auto;"
+            src="http://www.hotavatars.com/wp-content/uploads/2019/01/I80W1Q0.png" alt="Card image cap">
+          <div class="card-body">
+            <h3 class="card-text">Monish Sharma</h3>
+            <p class="card-text text-center developer mt-4">Front End Developer</p>
+            <p class=" text-center mt-5">
+              <a href="https://www.facebook.com/iammoniSHarma" target="_blank">
+                <i class="fab fa-facebook mr-2 fa-lg"></i>
+              
+              </a>
+              <a href="https://www.instagram.com/monish1112/" target="_blank">
+              
+              <i class="fab fa-instagram mr-2 fa-lg"></i>
 
-                    </div>
+              </a>
 
-                </div>
+              <a href="https://github.com/monishsharma" target="_blank">
+                <i class="fab fa-github fa-lg"></i>
+              </a>
+
+
+            </p>
+            <div class="card " style="border: none;;">
+              <div class="card-body">
+                <p id="location">
+                  <i class="far fa-calendar-check mr-2"></i>
+                  December, 11 1997
+                </p>
+                <p id="location">
+                  <i class="fas fa-location-arrow mr-2 x"></i>
+                  Gwalior ,India
+                </p>
+              </div>
             </div>
-            <!-- <div class="col-md-9">
+            <button style="border: none; outline:none;" class="card-text md-trigger text-center emailButton  mt-4"
+              data-modal="modal-12">About
+              Me</button>
+
+          </div>
+
+        </div>
+      </div>
+      <!-- <div class="col-md-9">
                 <div class="card" style="top:0">
                     <div class="card-header" style="margin:0; font-weight: bold;">
                         <div class="float-xl-right">
@@ -133,9 +218,9 @@
                     </div>
                 </div>
             </div> -->
-        </div>
     </div>
-    <script src="./assets/js/index.js"></script>
+  </div>
+  <script src="./assets/js/index.js"></script>
 </body>
 
 </html>
